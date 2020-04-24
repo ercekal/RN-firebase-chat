@@ -22,6 +22,7 @@ class Fire {
   }
   checkAuth = () => {
     firebase.auth().onAuthStateChanged(user => {
+      console.log('user: ', user);
       if(!user){
         firebase.auth().signInAnonymously()
       }
